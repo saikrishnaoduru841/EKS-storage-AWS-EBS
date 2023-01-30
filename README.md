@@ -254,6 +254,29 @@ kubectl get pods -n kube-system
     
 =======
     
+Step-02: Create following Kubernetes manifests
+
+[Create Storage Class manifest]
+
+Ref:-https://kubernetes.io/docs/concepts/storage/storage-classes/#volume-binding-mode
+ 
+Important Note: WaitForFirstConsumer mode will delay the volume binding and provisioning of a PersistentVolume until a Pod using the PersistentVolumeClaim is created.
+
+Create Persistent Volume Claims manifest
+
+[Above you have manifest yaml files]
+------------------------------------
+# Create Storage Class & PVC
+kubectl apply -f kube-manifests/
+
+# List Storage Classes
+kubectl get sc
+
+# List PVC
+kubectl get pvc 
+
+# List PV
+kubectl get pv
     
     
     
