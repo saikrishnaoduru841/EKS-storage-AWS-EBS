@@ -32,15 +32,15 @@ Step-01-03: Configure AWS Command Line using Security Credentials
     Copy Access ID and Secret access key
     Go to command line and provide the required details
 
-aws configure
-AWS Access Key ID [None]: ABCDEFGHIAZBERTUCNGG  (Replace your creds when prompted)
-AWS Secret Access Key [None]: uMe7fumK1IdDB094q2sGFhM5Bqt3HQRw3IHZzBDTm  (Replace your creds when prompted)
-Default region name [None]: us-east-1
-Default output format [None]: json
+1)aws configure
+2)AWS Access Key ID [None]: ABCDEFGHIAZBERTUCNGG  (Replace your creds when prompted)
+3)AWS Secret Access Key [None]: uMe7fumK1IdDB094q2sGFhM5Bqt3HQRw3IHZzBDTm  (Replace your creds when prompted)
+4)Default region name [None]: us-east-1
+5)Default output format [None]: json
 
-Test if AWS CLI is working after configuring the above
+[Test if AWS CLI is working after configuring the above]
 
-aws ec2 describe-vpcs
+1)aws ec2 describe-vpcs
 
 
 Step-02: Install kubectl CLI
@@ -48,11 +48,17 @@ Step-02: Install kubectl CLI
 Ref:- https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 -----
 mkdir kubectlbinary
+
 cd kubectlbinary
+
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.7/2022-10-31/bin/linux/amd64/kubectl
+
 chmod +x ./kubectl
+
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
+
 kubectl version --short --client
 
 
