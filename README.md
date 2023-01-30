@@ -187,6 +187,9 @@ Step-02: Create IAM policyy
     Go to Services -> IAM
     Create a Policy
         Select JSON tab and copy paste the below JSON
+        
+        
+        
 
 {
   "Version": "2012-10-17",
