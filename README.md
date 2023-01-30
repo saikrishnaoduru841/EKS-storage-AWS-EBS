@@ -286,7 +286,24 @@ kubectl get pvc
 # List PV
 kubectl get pv
     
-    
+# List Services
+kubectl get svc
+
+# Get Public IP
+kubectl get nodes -o wide
+
+# Access Health Status API for User Management Service
+http://<EKS-WorkerNode-Public-IP>:31231/usermgmt/health-status   
+
+
+Step-04: Connect to MySQL Database
+
+# Connect to MYSQL Database
+kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -pdbpassword11
+
+# Verify usermgmt schema got created which we provided in ConfigMap
+mysql> show schemas;
+
     
 
 
